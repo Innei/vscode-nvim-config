@@ -1,6 +1,6 @@
 return {
-    "sitiom/nvim-numbertoggle",
-    event = "VeryLazy",
-    enabled = true,
-    vscode = true
+  "sitiom/nvim-numbertoggle",
+  event = "VeryLazy",
+  enabled = true,
+  vscode = true,
 }

@@ -1,4 +1,4 @@
 return {
-    "tpope/vim-repeat",
-    enabled=false
+  "tpope/vim-repeat",
+  enabled = false,
 }

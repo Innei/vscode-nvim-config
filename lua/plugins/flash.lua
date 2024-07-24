@@ -23,5 +23,5 @@ return {
       -- 1: when pos == "end" and pos < current position
       offset = nil, ---@type number
     },
-  }
+  },
 }
