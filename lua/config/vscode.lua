@@ -24,7 +24,7 @@ keymap("n", "<Leader>/", notify("workbench.action.findInFiles"), { silent = true
 keymap("n", "<Leader>pr", notify("workbench.action.replaceInFiles"), { silent = true }) -- use ripgrep to search files
 keymap("n", "<Leader>gcc", notify("editor.action.addCommentLine"), { silent = true })
 keymap("v", "<Leader>gc", notify("editor.action.addCommentLine"), { silent = true })
-keymap("n", "<leader>bq", notify("workbench.action.closeOtherEditors", { silent = true }))
+keymap("n", "<leader>bq", notify("workbench.action.closeOtherEditors"), { silent = true })
 
 -- delete lazynvim built-in keymaps
 vim.keymap.del({ "n" }, "]e")
