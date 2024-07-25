@@ -33,6 +33,8 @@ vim.keymap.del({ "n" }, "[d")
 vim.keymap.del({ "n" }, "]d")
 vim.keymap.del({ "n" }, "]w")
 vim.keymap.del({ "n" }, "[w")
+vim.keymap.del({ "n" }, "]b")
+vim.keymap.del({ "n" }, "[b")
 
 keymap("n", "]d", notify("editor.action.marker.next"), { silent = true })
 keymap("n", "[d", notify("editor.action.marker.prev"), { silent = true })
@@ -42,5 +44,8 @@ keymap("n", "]e", notify("editor.action.marker.next", "Error"), { silent = true 
 
 keymap("n", "[w", notify("editor.action.marker.prev", "Warning"), { silent = true })
 keymap("n", "[e", notify("editor.action.marker.prev", "Error"), { silent = true })
+
+keymap('n', '[b', notify('workbench.action.previousEditor'), { silent = true })
+keymap('n', ']b', notify('workbench.action.nextEditor'), { silent = true })
 
 return M
