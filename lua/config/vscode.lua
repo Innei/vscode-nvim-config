@@ -25,7 +25,7 @@ keymap("n", "<Leader>pr", notify("workbench.action.replaceInFiles"), { silent = 
 keymap("n", "<Leader>gcc", notify("editor.action.addCommentLine"), { silent = true })
 keymap("v", "<Leader>gc", notify("editor.action.addCommentLine"), { silent = true })
 keymap("n", "<leader>bq", notify("workbench.action.closeOtherEditors"), { silent = true })
-
+keymap("n", "\\", notify("workbench.files.action.showActiveFileInExplorer"), { silent = true })
 -- delete lazynvim built-in keymaps
 vim.keymap.del({ "n" }, "]e")
 vim.keymap.del({ "n" }, "[e")
