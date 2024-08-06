@@ -12,7 +12,7 @@ local vscode = require("vscode")
 M.my_vscode = augroup("MyVSCode", {})
 
 local function notify(cmd, opt)
-  return string.format("<cmd>lua require('vscode').call('%s', { args = { \"%s\" } })<CR>", cmd, opt)
+  return string.format("<cmd>lua require('vscode').call('%s')<CR>", cmd, opt)
 end
 
 -- local function v_notify(cmd, opt)
@@ -28,6 +28,7 @@ keymap("n", "<Leader>gcc", notify("editor.action.addCommentLine"), { silent = tr
 keymap("v", "<Leader>gc", notify("editor.action.addCommentLine"), { silent = true })
 keymap("n", "<leader>bq", notify("workbench.action.closeOtherEditors"), { silent = true })
 keymap("n", "\\", notify("workbench.files.action.showActiveFileInExplorer"), { silent = true })
+keymap("n", "za", notify("editor.fold"), { silent = true })
 -- delete lazynvim built-in keymaps
 vim.keymap.del({ "n" }, "]e")
 vim.keymap.del({ "n" }, "[e")
