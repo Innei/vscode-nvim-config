@@ -18,7 +18,7 @@ opt.wrap = true
 opt.clipboard = ""
 -- opt.laststatus = 0
 opt.spelllang = "en,cjk"
--- vim.opt.spell = true
+vim.opt.spell = false
 opt.spelloptions = "camel"
 opt.scrolloff = 10
 opt.indentexpr = ""
@@ -45,3 +45,10 @@ if vim.g.neovide then
   vim.g.neovide_floating_blur_amount_x = 12.0
   vim.g.neovide_floating_blur_amount_y = 12.0
 end
+
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = "*",
+  callback = function()
+    vim.opt.spell = false
+  end,
+})
