@@ -2,7 +2,9 @@ if not vim.g.vscode then
   return {}
 end
 
-local M = {}
+local M = {
+   
+}
 
 local augroup = vim.api.nvim_create_augroup
 local keymap = vim.api.nvim_set_keymap
